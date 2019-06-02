@@ -17,7 +17,14 @@ GRAPHGEN_OBJECTS := ./Objects/Graphgen
 COMMON_SOURCES := ./Sources/Common
 COMMON_OBJECTS := ./Objects/Common
 
-all: digraphgen graphgen mst minpath
+all: dirs digraphgen graphgen mst minpath
+
+dirs:
+	@mkdir -p Objects/Minpath
+	@mkdir -p Objects/MST
+	@mkdir -p Objects/Digraphgen
+	@mkdir -p Objects/Graphgen
+	@mkdir -p Objects/Common
 
 digraphgen: $(COMMON_OBJECTS)/Exception.o \
 	        $(DIGRAPHGEN_OBJECTS)/Digraphgen.o

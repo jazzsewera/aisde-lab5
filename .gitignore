@@ -3,3 +3,7 @@ out/
 *.o
 *.jsonl
 *.pdf
+digraphgen
+graphgen
+minpath
+mst
