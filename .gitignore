@@ -1,0 +1,5 @@
+out/
+.clang_complete
+*.o
+*.jsonl
+*.pdf
