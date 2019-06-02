@@ -22,7 +22,7 @@
 #include "Exception.h"
 
 const int STDDEV = 200;
-const int SEED   = 300499;	// TU WPISUJEMY NUMER ALBUMU
+const int SEED   = 000000;	// TU WPISUJEMY NUMER ALBUMU
 
 // Krawędź grafu nieskierowanego
 class Edge {

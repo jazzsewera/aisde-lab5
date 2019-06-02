@@ -3,8 +3,8 @@
 mkdir -p out/pdf
 rm -f out/*.jsonl
 
-SAMPLES_VERTS_MST="50 100 200"
-EDGE_MST=220
+SAMPLES_VERTS_MST="1500 2500 5000 10000 25000 50000 100000 150000"
+EDGE_MST=1000000
 
 for vert in $(echo $SAMPLES_VERTS_MST); do
   ./graphgen $vert $EDGE_MST > /dev/null

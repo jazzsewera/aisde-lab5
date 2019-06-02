@@ -3,7 +3,6 @@ from scipy.stats import linregress
 import json
 import sys
 import getopt
-import re
 try:
     from matplotlib import pyplot as plt
 except Exception:
@@ -58,7 +57,6 @@ def plot_mst():
         const_ve = edges[0]
         plt.plot(verts, times['Boruvka'])
         plt.plot(verts, times['Kruskal'])
-    print(times)
 
     legend = [
         'Boruvka',
@@ -140,7 +138,7 @@ def plot_minpath():
         plt.plot(verts, times['floyd'])
         if plot_dfs:
             plt.plot(verts, times['dfs'])
-    print(times)
+
     legend = [
         'dij_mat_tab',
         'dij_mat_heap',
@@ -203,8 +201,6 @@ def plot_log(execution_time_array, ve_number_arr):
         data_big_val_log = np.log2(data_big_val[arr_start:])
 
     slope, _, _, _, err = linregress(data_big_val_log, exec_time_log_arr)
-    # print(slope)
-    # print(err)
     plt.plot(
         data_big_val_log, exec_time_log_arr
     )

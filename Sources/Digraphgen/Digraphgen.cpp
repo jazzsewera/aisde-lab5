@@ -23,7 +23,7 @@
 #include "Exception.h"
 
 const int MAXWEIGHT = 100;
-const int SEED      = 300499;	// TU WPISUJEMY NUMER ALBUMU
+const int SEED      = 000000;	// TU WPISUJEMY NUMER ALBUMU
 
 class Edge {
 	public:

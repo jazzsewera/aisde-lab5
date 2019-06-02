@@ -3,8 +3,8 @@
 mkdir -p out/pdf
 rm -f out/*.jsonl
 
-SAMPLES_EDGES_MST="100 200 500 1000 1300 1700 2000"
-VERT_MST=50
+SAMPLES_EDGES_MST="4500 8500 16500 33000 65000 138000 266000 532000 1124000"
+VERT_MST=2500
 
 for edge in $(echo $SAMPLES_EDGES_MST); do
   ./graphgen $VERT_MST $edge > /dev/null
