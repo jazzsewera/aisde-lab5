@@ -1,5 +1,7 @@
 #!/bin/bash
 
+make
+
 mkdir -p out/pdf
 rm -f out/*.jsonl
 
