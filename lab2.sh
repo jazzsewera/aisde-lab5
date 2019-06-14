@@ -1,4 +1,5 @@
 #!/bin/bash
+# Dijkstra and Floyd
 
 mkdir -p out/pdf
 rm -f out/*.jsonl

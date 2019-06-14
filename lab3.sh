@@ -1,4 +1,5 @@
 #!/bin/bash
+# Boruvka and Kruskal
 
 mkdir -p out/pdf
 rm -f out/*.jsonl
