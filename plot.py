@@ -50,13 +50,13 @@ def plot_mst():
     if all(vert == verts[0] for vert in verts):
         x_label = 'edges'
         const_ve = verts[0]
-        plt.plot(edges, times['Boruvka'])
-        plt.plot(edges, times['Kruskal'])
+        plt.plot(edges, times['Boruvka'], 'o-')
+        plt.plot(edges, times['Kruskal'], 'o-')
     else:
         x_label = 'vertices'
         const_ve = edges[0]
-        plt.plot(verts, times['Boruvka'])
-        plt.plot(verts, times['Kruskal'])
+        plt.plot(verts, times['Boruvka'], 'o-')
+        plt.plot(verts, times['Kruskal'], 'o-')
 
     legend = [
         'Boruvka',
@@ -121,23 +121,23 @@ def plot_minpath():
         # If all verts are the same, make plot for edge number
         x_label = 'edges'
         const_ve = verts[0]
-        plt.plot(edges, times['dij_mat_tab'])
-        plt.plot(edges, times['dij_mat_heap'])
-        plt.plot(edges, times['dij_tab_tab'])
-        plt.plot(edges, times['dij_tab_heap'])
-        plt.plot(edges, times['floyd'])
+        plt.plot(edges, times['dij_mat_tab'], 'o-')
+        plt.plot(edges, times['dij_mat_heap'], 'o-')
+        plt.plot(edges, times['dij_tab_tab'], 'o-')
+        plt.plot(edges, times['dij_tab_heap'], 'o-')
+        plt.plot(edges, times['floyd'], 'o-')
         if plot_dfs:
-            plt.plot(edges, times['dfs'])
+            plt.plot(edges, times['dfs'], 'o-')
     else:
         x_label = 'vertices'
         const_ve = edges[0]
-        plt.plot(verts, times['dij_mat_tab'])
-        plt.plot(verts, times['dij_mat_heap'])
-        plt.plot(verts, times['dij_tab_tab'])
-        plt.plot(verts, times['dij_tab_heap'])
-        plt.plot(verts, times['floyd'])
+        plt.plot(verts, times['dij_mat_tab'], 'o-')
+        plt.plot(verts, times['dij_mat_heap'], 'o-')
+        plt.plot(verts, times['dij_tab_tab'], 'o-')
+        plt.plot(verts, times['dij_tab_heap'], 'o-')
+        plt.plot(verts, times['floyd'], 'o-')
         if plot_dfs:
-            plt.plot(verts, times['dfs'])
+            plt.plot(verts, times['dfs'], 'o-')
 
     legend = [
         'dij_mat_tab',
